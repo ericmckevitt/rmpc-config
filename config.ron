@@ -6,7 +6,7 @@
     password: None,
     theme: "catppuccin_mocha",
     cache_dir: None,
-    on_song_change: None,
+    on_song_change: None, //["~/.config/rmpc/notify"],
     volume_step: 5,
     max_fps: 30,
     scrolloff: 0,
@@ -137,7 +137,10 @@
         ),
         // (
         //     name: "Albums",
-        //     panes:[(size: "20%", pane: Pane(AlbumArt)), (size: "80%", pane: Pane(Queue))],
+        //     pane: Split(
+        //       direction: Horizontal,
+        //       panes: [(size: "20%", pane: Pane(AlbumArt)), (size: "80%", pane: Pane(Albums)) ]
+        //     ),
         // ),
         // (
         //     name: "Playlists",
