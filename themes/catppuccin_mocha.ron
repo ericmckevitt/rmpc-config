@@ -15,7 +15,7 @@
         active_style: (fg: "black", bg: "blue", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "#cba6f7", modifiers: "Bold"),
+    highlighted_item_style: (fg: "#eba0ac", modifiers: "Bold"),
     current_item_style: (fg: "black", bg: "blue", modifiers: "Bold"),
     borders_style: (fg: "blue"),
     highlight_border_style: (fg: "blue"),
@@ -23,8 +23,8 @@
     progress_bar: (
         symbols: ["", "", " "],
         track_style: (fg: "#1e2030"),
-        elapsed_style: (fg: "blue"),
-        thumb_style: (fg: "blue", bg: "#1e2030"),
+        elapsed_style: (fg: "#eba0ac"),
+        thumb_style: (fg: "#eba0ac", bg: "#1e2030"),
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
