@@ -14,6 +14,7 @@
     enable_mouse: true,
     status_update_interval_ms: 1000,
     select_current_song_on_change: false,
+    browser_column_widths: [20, 38, 42],
     album_art: (
         method: Auto,
         max_size_px: (width: 900, height: 900),
@@ -30,12 +31,12 @@
             "<Tab>":   NextTab,
             "<S-Tab>": PreviousTab,
             "1":       SwitchToTab("Queue"),
-            "2":       SwitchToTab("Directories"),
-            "3":       SwitchToTab("Artists"),
+            "2":       SwitchToTab("Artists"),
             // "4":       SwitchToTab("Album Artists"),
-            "4":       SwitchToTab("Albums"),
+            "3":       SwitchToTab("Albums"),
             // "6":       SwitchToTab("Playlists"),
-            "5":       SwitchToTab("Search"),
+            "4":       SwitchToTab("Search"),
+            "5":       SwitchToTab("Directories"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -101,10 +102,11 @@
             (value: "any",         label: "Any Tag"),
             (value: "artist",      label: "Artist"),
             (value: "album",       label: "Album"),
-            (value: "albumartist", label: "Album Artist"),
+            // (value: "albumartist", label: "Album Artist"),
             (value: "title",       label: "Title"),
             (value: "filename",    label: "Filename"),
             (value: "genre",       label: "Genre"),
+            (value: "albumartist",       label: "Featured"),
         ],
     ),
     artists: (
@@ -118,10 +120,6 @@
                 direction: Horizontal,
                 panes: [(size: "20%", pane: Pane(AlbumArt)), (size: "80%", pane: Pane(Queue))],
             ),
-        ),
-        (
-            name: "Directories",
-            pane: Pane(Directories),
         ),
         (
             name: "Artists",
@@ -150,6 +148,17 @@
             name: "Search",
             pane: Pane(Search),
         ),
+        (
+            name: "Directories",
+            pane: Pane(Directories),
+        ),
+        // (
+        //     name: "Browser",
+        //     pane: Split(
+        //         direction: Horizontal,
+        //         panes: [(size: "100%", pane: Pane(AlbumArt))],
+        //     ),
+        // ),
     ],
 )
 
