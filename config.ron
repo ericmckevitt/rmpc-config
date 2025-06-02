@@ -2,10 +2,12 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
-    address: "127.0.0.1:6600",
+    // address: "127.0.0.1:6600",
+    address: "/Users/ericmckevitt/.mpd/socket",
+    // cache_dir: None,
+    cache_dir: Some("/tmp/rmpc/cache"),
     password: None,
     theme: "catppuccin_mocha",
-    cache_dir: None,
     on_song_change: None, //["~/.config/rmpc/notify"],
     volume_step: 5,
     max_fps: 30,
