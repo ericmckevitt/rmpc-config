@@ -8,7 +8,7 @@
     cache_dir: Some("/tmp/rmpc/cache"),
     password: None,
     theme: "catppuccin_mocha",
-    on_song_change: None, //["~/.config/rmpc/notify"],
+    on_song_change: ["~/.config/rmpc/increment_play_count"], //["~/.config/rmpc/notify"],
     volume_step: 5,
     max_fps: 30,
     scrolloff: 0,

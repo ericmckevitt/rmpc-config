@@ -37,25 +37,41 @@
             prop: (kind: Property(Artist),
                 default: (kind: Text("Unknown"))
             ),
-            width: "20%",
+            width: "15%",
         ),
         (
             prop: (kind: Property(Title),
                 default: (kind: Text("Unknown"))
             ),
-            width: "35%",
+            width: "55%",
         ),
         (
             prop: (kind: Property(Album), style: (fg: "white"),
                 default: (kind: Text("Unknown Album"), style: (fg: "white"))
             ),
-            width: "30%",
+            width: "20%",
+        ),
+        // (
+        //     prop: (kind: Property(Other("albumartist")),
+        //         default: (
+        //             kind: Text(""),
+        //             // style: (fg: "red", bg: "black"),
+        //             default: None
+        //         )
+        //     ),
+        //     width_percent: 100,
+        // ),
+        (
+            prop: (kind: Sticker("playCount"), default: (kind: Text("0"))),
+            width: "9",
+            alignment: Right,
+            label: "Playcount"
         ),
         (
             prop: (kind: Property(Duration),
                 default: (kind: Text("-"))
             ),
-            width: "15%",
+            width: "10%",
             alignment: Right,
         ),
     ],
