@@ -6,6 +6,7 @@
     address: "/Users/ericmckevitt/.mpd/socket",
     // cache_dir: None,
     cache_dir: Some("/tmp/rmpc/cache"),
+    lyrics_dir: Some("~/Music/mpd"),
     password: None,
     theme: "catppuccin_mocha",
     on_song_change: ["~/.config/rmpc/increment_play_count"], //["~/.config/rmpc/notify"],
@@ -39,6 +40,7 @@
             // "6":       SwitchToTab("Playlists"),
             "4":       SwitchToTab("Search"),
             "5":       SwitchToTab("Directories"),
+            "6":       SwitchToTab("Lyrics"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -154,12 +156,21 @@
             name: "Directories",
             pane: Pane(Directories),
         ),
+        (
+            name: "Lyrics",
+            // pane: Pane(Lyrics),
+            pane: Split(
+                direction: Vertical,
+                panes: [(size: "25%", pane: Pane(AlbumArt)), (size: "70%", pane: Pane(Lyrics), vertical_align: Bottom)],
+            ),
+        ),
         // (
         //     name: "Browser",
-        //     pane: Split(
-        //         direction: Horizontal,
-        //         panes: [(size: "100%", pane: Pane(AlbumArt))],
-        //     ),
+        //     pane: Pane(Browser),
+        //     // pane: Split(
+        //     //     direction: Horizontal,
+        //     //     panes: [(size: "100%", pane: Pane(AlbumArt))],
+        //     // ),
         // ),
     ],
 )
