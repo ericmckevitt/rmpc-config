@@ -19,13 +19,14 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
     └── catppuccin_mocha.ron    # Theme file (RON format)
 ```
 
-## Setup
+## ⚙️ Setup
 1.	Dependencies
     - rmpc (https://mierak.github.io/rmpc/next/overview/)
     - mpd (https://mpd.readthedocs.io/en/latest/mpd.conf.5.html)
     - any terminal notifier if you use the notify script
-2.	Install
-    - Copy config.ron to your config dir (e.g., ~/.config/rmpc/config.ron)
+2.	Installation
+    - Follow rmpc install directions on their website
+    - Copy config.ron contents to your config file (e.g., `~/.config/rmpc/config.ron`)
     - Copy over theme or create your own
     - Make scripts executable by running `chmod +x increment_play_count notify`
 
