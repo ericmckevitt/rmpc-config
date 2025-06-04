@@ -1,13 +1,12 @@
 # RMPC Configuration
 
-<!-- ![rmpc UI Screenshot](assets/rmpc_screenshot.png) -->
+## 🧠 Overview
+This is my personal configuration for rmpc, a command-line client for MPD (Music Player Daemon). It includes custom scripts and MPD settings optimized for a local music library.
+
 <div align="center">
   <img src="assets/rmpc_screenshot.png" alt="rmpc UI Screenshot" width="800"><br>
   <em>A snapshot of the rmpc interface showing the currently playing track.</em>
 </div>
-
-## 🧠 Overview
-This is my personal configuration for rmpc, a command-line client for MPD (Music Player Daemon). It includes custom scripts and MPD settings optimized for a local music library.
 
 ## 📂 Directory Structure
 ```
@@ -29,3 +28,18 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
     - Copy config.ron to your config dir (e.g., ~/.config/rmpc/config.ron)
     - Copy over theme or create your own
     - Make scripts executable by running `chmod +x increment_play_count notify`
+
+## 🎬 Demo
+
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="assets/adding_to_queue.gif" alt="Adding to Queue" width="400"></td>
+      <td><img src="assets/search_demo.gif" alt="Search Demo" width="400"></td>
+    </tr>
+    <tr>
+      <td align="center"><em>Adding to Queue</em></td>
+      <td align="center"><em>Search Demo</em></td>
+    </tr>
+  </table>
+</div>
