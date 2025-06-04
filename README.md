@@ -29,6 +29,7 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
     - Copy config.ron contents to your config file (e.g., `~/.config/rmpc/config.ron`)
     - Copy over theme or create your own
     - Make scripts executable by running `chmod +x increment_play_count notify`
+3. Set up a music directory to store your mp3 files. My config assumes `~/Music/mpd/` is the base directory for rmpc. Within `~/Music/mpd/`, each artist is given a folder containing folders for each of their albums (i.e., `~/Music/mpd/Daft Punk/Discovery/` is the path to a series of mp3's for the album Discovery by Daft Punk). 
 
 ## 🎬 Demo
 
@@ -45,3 +46,16 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
   <p><em>Search Demo</em></p>
   <p>Using fuzzy search to find artists and albums instantly within a large local library. Assuming .mp3 files are tagged with metadata, you can create advanced searches based on artist, genre, features, etc., using regular expressions.</p>
 </div>
+
+# Utilities For Adding Music & Metadata
+
+I have a music directory that rmpc pulls from located at `~/Music/mpd/`, so much of the setup will depend on this assummption, but feel free to adjust to your setup. 
+
+## `utils/tag_music.sh`
+
+I have the `tag_music.sh` script located in my `~/Music/` directory. This script adds standardized ID3 metadata (artist, album, track title, and track number) to each .mp3 file in an album folder using the eyeD3 tool. To use: 
+- Set value for `ARTIST` variable
+- Set value for `ALBUM` variable
+- Set value for `DIR` variable, representing the path to the mp3 files for that album
+- Fill in the `TRACKS` array with the names of the album's tracks (matching the mp3 filenames) in track-order.
+- Run with `./tag_music.sh` from the same directory the script is in and ensure all tracks were found and tagged. 
