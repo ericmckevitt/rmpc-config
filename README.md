@@ -32,14 +32,15 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
 ## 🎬 Demo
 
 <div align="center">
-  <table>
-    <tr>
-      <td><img src="assets/adding_to_queue.gif" alt="Adding to Queue" width="400"></td>
-      <td><img src="assets/search_demo.gif" alt="Search Demo" width="400"></td>
-    </tr>
-    <tr>
-      <td align="center"><em>Adding to Queue</em></td>
-      <td align="center"><em>Search Demo</em></td>
-    </tr>
-  </table>
+  <img src="assets/adding_to_queue.gif" alt="Adding to Queue" width="800">
+  <p><em>Adding to Queue</em></p>
+  <p>A demonstration of how tracks can be quickly added to the play queue using the rmpc interface.</p>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="assets/search_demo.gif" alt="Search Demo" width="800">
+  <p><em>Search Demo</em></p>
+  <p>Using fuzzy search to find artists and albums instantly within a large local library. Assuming .mp3 files are tagged with metadata, you can create advanced searches based on artist, genre, features, etc., using regular expressions.</p>
 </div>
