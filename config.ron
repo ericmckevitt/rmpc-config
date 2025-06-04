@@ -2,14 +2,12 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
-    // address: "127.0.0.1:6600",
     address: "/Users/ericmckevitt/.mpd/socket",
-    // cache_dir: None,
     cache_dir: Some("/tmp/rmpc/cache"),
     lyrics_dir: Some("~/Music/mpd"),
     password: None,
     theme: "catppuccin_mocha",
-    on_song_change: ["~/.config/rmpc/increment_play_count"], //["~/.config/rmpc/notify"],
+    on_song_change: ["~/.config/rmpc/increment_play_count"], 
     volume_step: 5,
     max_fps: 30,
     scrolloff: 0,
@@ -35,9 +33,7 @@
             "<S-Tab>": PreviousTab,
             "1":       SwitchToTab("Queue"),
             "2":       SwitchToTab("Artists"),
-            // "4":       SwitchToTab("Album Artists"),
             "3":       SwitchToTab("Albums"),
-            // "6":       SwitchToTab("Playlists"),
             "4":       SwitchToTab("Search"),
             "5":       SwitchToTab("Directories"),
             "6":       SwitchToTab("Lyrics"),
@@ -106,11 +102,10 @@
             (value: "any",         label: "Any Tag"),
             (value: "artist",      label: "Artist"),
             (value: "album",       label: "Album"),
-            // (value: "albumartist", label: "Album Artist"),
             (value: "title",       label: "Title"),
             (value: "filename",    label: "Filename"),
             (value: "genre",       label: "Genre"),
-            (value: "albumartist",       label: "Featured"),
+            (value: "albumartist", label: "Featured"),
         ],
     ),
     artists: (
@@ -129,25 +124,10 @@
             name: "Artists",
             pane: Pane(Artists),
         ),
-        // (
-        //     name: "Album Artists",
-        //     pane: Pane(AlbumArtists),
-        // ),
         (
             name: "Albums",
             pane: Pane(Albums),
         ),
-        // (
-        //     name: "Albums",
-        //     pane: Split(
-        //       direction: Horizontal,
-        //       panes: [(size: "20%", pane: Pane(AlbumArt)), (size: "80%", pane: Pane(Albums)) ]
-        //     ),
-        // ),
-        // (
-        //     name: "Playlists",
-        //     pane: Pane(Playlists),
-        // ),
         (
             name: "Search",
             pane: Pane(Search),
@@ -158,20 +138,11 @@
         ),
         (
             name: "Lyrics",
-            // pane: Pane(Lyrics),
             pane: Split(
                 direction: Vertical,
                 panes: [(size: "25%", pane: Pane(AlbumArt)), (size: "70%", pane: Pane(Lyrics), vertical_align: Bottom)],
             ),
         ),
-        // (
-        //     name: "Browser",
-        //     pane: Pane(Browser),
-        //     // pane: Split(
-        //     //     direction: Horizontal,
-        //     //     panes: [(size: "100%", pane: Pane(AlbumArt))],
-        //     // ),
-        // ),
     ],
 )
 
