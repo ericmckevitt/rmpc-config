@@ -19,20 +19,8 @@ if ! rmpc albumart --output "$ALBUM_ART_PATH"; then
     ALBUM_ART_PATH="${DEFAULT_ALBUM_ART_PATH}"
 fi
 
-# # build the message
-# MSG="${ARTIST} - ${TITLE}"
-#
-# # percent-encode via python
-# ENCODED=$(python3 -c 'import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))' "$MSG")
-#
-# # fire the Hammerspoon canvasNotify
-# open "hammerspoon://canvasNotify?text=${ENCODED}"
-
 MSG_TITLE=$(urlencode "$TITLE")
 MSG_ARTIST=$(urlencode "$ARTIST")
-DUR=5
 
-# open "hammerspoon://canvasNotify?song=${MSG_TITLE}&artist=${MSG_ARTIST}&duration=${DUR}"
-
+# Integrates with hammerspoon, but use whatever terminal notifier you have set up. 
 open "hammerspoon://canvasNotify?line1=$TITLE&line2=$ARTIST&duration=3"
-# open "hammerspoon://canvasNotify?line1=line&line2=test&duration=1"
