@@ -59,3 +59,32 @@ I have the `tag_music.sh` script located in my `~/Music/` directory. This script
 - Set value for `DIR` variable, representing the path to the mp3 files for that album
 - Fill in the `TRACKS` array with the names of the album's tracks (matching the mp3 filenames) in track-order.
 - Run with `./tag_music.sh` from the same directory the script is in and ensure all tracks were found and tagged. 
+
+## Adding Other Metadata
+
+### Recording Date
+To add the album's recording date, which rmpc will use to sort the albums, use one of the following commands (after replacing with the correct date) when in the album's directory: 
+- `eyed3 --recording-date=2021 *.mp3`
+- `eyeD3 --recording-date=2025-01-31 *.mp3`
+
+### Features
+I use the `albumartist` tag to denote the artists who are featured on the album. To speed up the process of tagging features, I include the features in the track name using the following format (`"<song_title> (feat. <featured_artist>).mp3"`) and then run the following command from the album directory: 
+
+```bash
+for f in *.mp3; do
+  if [[ "$f" =~ "\(feat\. ([^)]+)\)" ]]; then
+    FEATURED="${match[1]}"
+    echo "Setting album artist to '$FEATURED' for: $f"
+    eyeD3 --album-artist "$FEATURED" "$f"
+  fi
+done
+```
+
+### Album Art
+To add the album art to rmpc, make sure the album art is stored in the album directory and then run the following command (substituting in the name of the image file). 
+```bash
+for f in *.mp3; do
+  eyeD3 --add-image=cover.png:FRONT_COVER "$f"
+done
+```
+
