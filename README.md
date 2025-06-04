@@ -1,5 +1,11 @@
 # RMPC Configuration
 
+<!-- ![rmpc UI Screenshot](assets/rmpc_screenshot.png) -->
+<div align="center">
+  <img src="assets/rmpc_screenshot.png" alt="rmpc UI Screenshot" width="800"><br>
+  <em>A snapshot of the rmpc interface showing the currently playing track.</em>
+</div>
+
 ## 🧠 Overview
 This is my personal configuration for rmpc, a command-line client for MPD (Music Player Daemon). It includes custom scripts and MPD settings optimized for a local music library.
 
@@ -16,8 +22,8 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
 
 ## Setup
 1.	Dependencies
-    - rmpc
-    - mpd
+    - rmpc (https://mierak.github.io/rmpc/next/overview/)
+    - mpd (https://mpd.readthedocs.io/en/latest/mpd.conf.5.html)
     - any terminal notifier if you use the notify script
 2.	Install
     - Copy config.ron to your config dir (e.g., ~/.config/rmpc/config.ron)
