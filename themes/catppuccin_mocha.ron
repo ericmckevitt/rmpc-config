@@ -51,16 +51,6 @@
             ),
             width: "20%",
         ),
-        // (
-        //     prop: (kind: Property(Other("albumartist")),
-        //         default: (
-        //             kind: Text(""),
-        //             // style: (fg: "red", bg: "black"),
-        //             default: None
-        //         )
-        //     ),
-        //     width_percent: 100,
-        // ),
         (
             prop: (kind: Sticker("playCount"), default: (kind: Text("0"))),
             width: "9",
