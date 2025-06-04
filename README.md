@@ -68,7 +68,7 @@ To add the album's recording date, which rmpc will use to sort the albums, use o
 - `eyeD3 --recording-date=2025-01-31 *.mp3`
 
 ### Features
-I use the `albumartist` tag to denote the artists who are featured on the album. To speed up the process of tagging features, I include the features in the track name using the following format (`"<song_title> (feat. <featured_artist>).mp3"`) and then run the following command from the album directory: 
+I use the `albumartist` tag (separate from the `artist` tag) to denote the artists who are featured on the album. To speed up the process of tagging features, I include the features in the track name using the following format (`"<song_title> (feat. <featured_artist>).mp3"`) and then run the following command from the album directory: 
 
 ```bash
 for f in *.mp3; do
@@ -88,3 +88,14 @@ for f in *.mp3; do
 done
 ```
 
+## Adding Genres with `utils/tag_genres.sh`
+You can use the script `utils/tag_genres.sh` to add genre tags to each track in an album. Simply navigate to the script and run it as `./tag_genres.sh <path_to_album_directory>`. Then, as you are prompted for each track, enter the genres that describe the track as a list. My preference is to use semicolons as delimiters.
+
+## Adding Lyrics with `utils/fetch_album_lyrics.sh`
+You can download `.lrc` files, and rmpc will display synchronized scrolling lyrics in the Lyrics pane. Use the script `utils/fetch_album_lyrics.sh` to automatically fetch `.lrc` files from [LRCLIB](https://lrclib.net/) for all mp3 files in the album directory. 
+- Usage: `./fetch_album_lyrics.sh <path_to_album_directory>`
+
+<div align="center">
+  <img src="assets/lyrics.png" alt="rmpc Lyrics Pane" width="800"><br>
+  <em>The rmpc synchronized scrolling lyrics in the Lyrics pane.</em>
+</div>
