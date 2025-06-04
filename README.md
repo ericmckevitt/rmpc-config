@@ -23,6 +23,7 @@ This is my personal configuration for rmpc, a command-line client for MPD (Music
 1.	Dependencies
     - rmpc (https://mierak.github.io/rmpc/next/overview/)
     - mpd (https://mpd.readthedocs.io/en/latest/mpd.conf.5.html)
+        - Some setup may be required to get mpd up and running, but there are plenty of tutorials available, and the process is relatively simple. 
     - any terminal notifier if you use the notify script
 2.	Installation
     - Follow rmpc install directions on their website
