@@ -7,14 +7,15 @@
     lyrics_dir: Some("~/Music/mpd"),
     password: None,
     theme: "catppuccin_mocha",
+
+
+
+
+
     on_song_change: ["~/.config/rmpc/increment_play_count"], 
     volume_step: 5,
     max_fps: 30,
-    scrolloff: 0, 
-
-
-
-
+    scrolloff: 0,
     wrap_navigation: false,
     enable_mouse: true,
     status_update_interval_ms: 1000,
