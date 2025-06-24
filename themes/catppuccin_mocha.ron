@@ -32,7 +32,7 @@
         ends_style: (),
         thumb_style: (fg: "blue"),
     ),
-    song_table_format: [
+    song_table_format: [ // view in the queue
         (
             prop: (kind: Property(Artist),
                 default: (kind: Text("Unknown"))
@@ -136,7 +136,7 @@
     browser_song_format: [
         (
             kind: Group([
-                (kind: Property(Track)),
+                (kind: Property(Track)), // track #
                 (kind: Text(" ")),
             ])
         ),
